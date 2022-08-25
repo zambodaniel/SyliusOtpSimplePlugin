@@ -1,6 +1,6 @@
 {
-    "name": "setono/sylius-plugin-skeleton",
-    "description": "Acme example plugin for Sylius.",
+    "name": "zambo-daniel/sylius-otp-simple-plugin",
+    "description": "ZamboDaniel example plugin for Sylius.",
     "license": "MIT",
     "type": "sylius-plugin",
     "keywords": [
@@ -38,12 +38,12 @@
     "prefer-stable": true,
     "autoload": {
         "psr-4": {
-            "Acme\\SyliusExamplePlugin\\": "src/"
+            "ZamboDaniel\\SyliusOtpSimplePlugin\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Tests\\Acme\\SyliusExamplePlugin\\": "tests/"
+            "Tests\\ZamboDaniel\\SyliusOtpSimplePlugin\\": "tests/"
         },
         "classmap": [
             "tests/Application/Kernel.php"
@@ -68,7 +68,7 @@
             "psalm"
         ],
         "check-style": "ecs check",
-        "ensure-test-container-exists": "[[ -f tests/Application/var/cache/test/Tests_Acme_SyliusExamplePlugin_Application_KernelTestDebugContainer.xml ]] || tests/Application/bin/console cache:warmup --env=test",
+        "ensure-test-container-exists": "[[ -f tests/Application/var/cache/test/Tests_ZamboDaniel_SyliusOtpSimplePlugin_Application_KernelTestDebugContainer.xml ]] || tests/Application/bin/console cache:warmup --env=test",
         "fix-style": "ecs check --fix",
         "phpunit": "phpunit"
     }

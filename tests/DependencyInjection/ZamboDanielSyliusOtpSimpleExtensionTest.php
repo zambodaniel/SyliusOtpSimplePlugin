@@ -2,20 +2,20 @@
 
 declare(strict_types=1);
 
-namespace Tests\Acme\SyliusExamplePlugin\DependencyInjection;
+namespace Tests\ZamboDaniel\SyliusOtpSimplePlugin\DependencyInjection;
 
-use Acme\SyliusExamplePlugin\DependencyInjection\AcmeSyliusExampleExtension;
+use ZamboDaniel\SyliusOtpSimplePlugin\DependencyInjection\ZamboDanielSyliusOtpSimpleExtension;
 use Matthias\SymfonyDependencyInjectionTest\PhpUnit\AbstractExtensionTestCase;
 
 /**
  * See examples of tests and configuration options here: https://github.com/SymfonyTest/SymfonyDependencyInjectionTest
  */
-final class AcmeSyliusExampleExtensionTest extends AbstractExtensionTestCase
+final class ZamboDanielSyliusOtpSimpleExtensionTest extends AbstractExtensionTestCase
 {
     protected function getContainerExtensions(): array
     {
         return [
-            new AcmeSyliusExampleExtension(),
+            new ZamboDanielSyliusOtpSimpleExtension(),
         ];
     }
 
@@ -33,6 +33,6 @@ final class AcmeSyliusExampleExtensionTest extends AbstractExtensionTestCase
     {
         $this->load();
 
-        $this->assertContainerBuilderHasParameter('acme_sylius_example.option', 'option_value');
+        $this->assertContainerBuilderHasParameter('zambo_daniel_sylius_otp_simple.option', 'option_value');
     }
 }

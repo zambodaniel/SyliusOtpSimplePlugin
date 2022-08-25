@@ -1,0 +1,2 @@
+zambo_daniel_sylius_otp_simple:
+    resource: "@ZamboDanielSyliusOtpSimplePlugin/Resources/config/routes.yaml"

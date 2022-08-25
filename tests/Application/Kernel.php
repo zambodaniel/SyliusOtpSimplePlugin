@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Tests\Acme\SyliusExamplePlugin\Application;
+namespace Tests\ZamboDaniel\SyliusOtpSimplePlugin\Application;
 
 use Symfony\Bundle\FrameworkBundle\Kernel\MicroKernelTrait;
 use Symfony\Component\Config\Loader\LoaderInterface;

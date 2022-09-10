@@ -1,1 +1,5 @@
-# TODO Add your shop routes here
+# TODO
+ipn:
+    path: payment/simplepay-notify
+    controller: ZamboDaniel\SyliusOtpSimplePlugin\Controller\IpnController::process
+    methods: POST

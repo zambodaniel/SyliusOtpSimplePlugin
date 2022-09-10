@@ -20,9 +20,6 @@ final class ZamboDanielSyliusOtpSimpleExtension extends Extension
          */
         $config = $this->processConfiguration($this->getConfiguration([], $container), $configs);
         $loader = new XmlFileLoader($container, new FileLocator(__DIR__ . '/../Resources/config'));
-
-        $container->setParameter('zambo_daniel_sylius_otp_simple.option', $config['option']);
-
         $loader->load('services.xml');
     }
 }

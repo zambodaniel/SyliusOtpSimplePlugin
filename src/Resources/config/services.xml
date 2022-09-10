@@ -2,6 +2,18 @@
 <container xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://symfony.com/schema/dic/services"
            xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
     <services>
-        <!-- Put your services here -->
+        <service id="app.otp_simple_payment" class="Payum\Core\Bridge\Symfony\Builder\GatewayFactoryBuilder">
+            <argument>ZamboDaniel\SyliusOtpSimplePlugin\Payum\OtpSimplePaymentGatewayFactory</argument>
+            <tag name="payum.gateway_factory_builder" factory="otp_simple_payment" />
+        </service>
+        <service id="ZamboDaniel\SyliusOtpSimplePlugin\Form\Type\OtpSimpleGatewayConfigurationType">
+            <tag name="sylius.gateway_configuration_type" type="otp_simple_payment" label="Otp SimplePay Payment" />
+            <tag name="form.type" />
+        </service>
+        <service id="ZamboDaniel\SyliusOtpSimplePlugin\Controller\IpnController" public="true" autowire="true">
+            <argument type="service" id="payum"/>
+            <argument type="service" id="logger"/>
+            <tag name="container.service_subscriber" />
+        </service>
     </services>
 </container>

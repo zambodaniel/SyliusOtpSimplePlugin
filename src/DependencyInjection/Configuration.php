@@ -17,13 +17,13 @@ final class Configuration implements ConfigurationInterface
         /**
          * @psalm-suppress MixedMethodCall,PossiblyUndefinedMethod
          */
-        $rootNode
-            ->children()
-                ->scalarNode('option')
-                    ->info('This is an example configuration option')
-                    ->isRequired()
-                    ->cannotBeEmpty()
-        ;
+        //$rootNode
+        //    ->children()
+        //        ->scalarNode('option')
+        //            ->info('This is an example configuration option')
+        //            ->isRequired()
+        //            ->cannotBeEmpty()
+        //;
 
         return $treeBuilder;
     }

@@ -8,7 +8,6 @@ use ZamboDaniel\SyliusOtpSimplePlugin\Payum\Action\CaptureAction;
 use ZamboDaniel\SyliusOtpSimplePlugin\Payum\Action\ConvertAction;
 use ZamboDaniel\SyliusOtpSimplePlugin\Payum\Action\NotifyAction;
 use ZamboDaniel\SyliusOtpSimplePlugin\Payum\Action\StatusAction;
-use ZamboDaniel\SyliusOtpSimplePlugin\Payum\Extension\PaymentStatusExtension;
 use ZamboDaniel\SyliusOtpSimplePlugin\Payum\OtpSimple\Api;
 
 final class OtpSimplePaymentGatewayFactory extends GatewayFactory

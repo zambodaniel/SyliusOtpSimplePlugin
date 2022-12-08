@@ -36,6 +36,7 @@ final class Api
     public function getTransactionStatus(string $transactionId): ?string
     {
         $trx = new SimplePayQuery();
+        $trx->setTimeout(30);
         $trx->addConfig($this->getConfig());
         $trx->addSimplePayId($transactionId);
         /** @var array $result */
@@ -53,6 +54,7 @@ final class Api
         $order = $payment->getOrder();
         $address = $order->getBillingAddress();
         $trx = new SimplePayStart();
+        $trx->setTimeout(30);
         $trx->setLogger($this->logger);
         $trx->addConfig($this->getConfig());
         $trx->addData('currency', $payment->getCurrencyCode());
@@ -100,6 +102,7 @@ final class Api
     public function processIpn(Request $request): ?array
     {
         $trx = new SimplePayIpn();
+        $trx->setTimeout(30);
         $trx->addConfig($this->getConfig());
         if ($trx->isIpnSignatureCheck($request->getContent())) {
             return $trx->getIpnConfirmContent();

@@ -6,6 +6,9 @@ use ZamboDaniel\SyliusOtpSimplePlugin\SDK\Common\Exception;
 
 trait Communication
 {
+
+    protected $timeout = 60;
+
     /**
      * Handler for cURL communication
      *
@@ -24,7 +27,7 @@ trait Communication
         curl_setopt($curlData, CURLOPT_POSTFIELDS, $data);
         curl_setopt($curlData, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($curlData, CURLOPT_USERAGENT, 'curl');
-        curl_setopt($curlData, CURLOPT_TIMEOUT, 60);
+        curl_setopt($curlData, CURLOPT_TIMEOUT, $this->getTimeout());
         curl_setopt($curlData, CURLOPT_FOLLOWLOCATION, true);
         curl_setopt($curlData, CURLOPT_HTTPHEADER, $headers);
         curl_setopt($curlData, CURLOPT_HEADER, true);
@@ -43,5 +46,15 @@ trait Communication
         }
         curl_close($curlData);
         return $result;
+    }
+
+    private function getTimeout()
+    {
+        return $this->timeout;
+    }
+
+    public function setTimeout($seconds)
+    {
+        $this->timeout = $seconds;
     }
 }

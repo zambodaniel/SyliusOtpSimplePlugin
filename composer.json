@@ -17,10 +17,10 @@
     ],
     "require": {
         "php": "^8.0",
-        "symfony/config": "^4.4 || ^5.4 || ^6.0",
-        "symfony/dependency-injection": "^4.4 || ^5.4 || ^6.0",
-        "symfony/http-kernel": "^4.4 || ^5.4 || ^6.0",
-        "sylius/sylius": "^1.11",
+        "symfony/config": "^5.4 || ^6.0",
+        "symfony/dependency-injection": "^5.4 || ^6.0",
+        "symfony/http-kernel": "^5.4 || ^6.0",
+        "sylius/sylius": "^1.11 || ^1.12",
         "ext-json": "*",
         "ext-curl": "*"
     },
@@ -35,14 +35,14 @@
         "psalm/plugin-symfony": "^3.1",
         "roave/security-advisories": "dev-latest",
         "setono/code-quality-pack": "^2.2",
-        "symfony/debug-bundle": "^4.4 || ^5.4 || ^6.0",
-        "symfony/dotenv": "^4.4 || ^5.4 || ^6.0",
-        "symfony/intl": "^4.4 || ^5.4 || ^6.0",
+        "symfony/debug-bundle": "^5.4 || ^6.0",
+        "symfony/dotenv": "^5.4 || ^6.0",
+        "symfony/intl": "^5.4 || ^6.0",
         "symfony/maker-bundle": "^1.36",
-        "symfony/property-info": "^4.4 || ^5.4 || ^6.0",
-        "symfony/serializer": "^4.4 || ^5.4 || ^6.0",
-        "symfony/web-profiler-bundle": "^4.4 || ^5.4 || ^6.0",
-        "symfony/webpack-encore-bundle": "^1.14"
+        "symfony/property-info": "^5.4 || ^6.0",
+        "symfony/serializer": "^5.4 || ^6.0",
+        "symfony/web-profiler-bundle": "^5.4 || ^6.0",
+        "symfony/webpack-encore-bundle": "^1.15"
     },
     "prefer-stable": true,
     "autoload": {
